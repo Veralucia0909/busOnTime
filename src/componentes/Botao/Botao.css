@@ -1,0 +1,46 @@
+/* ================================================================
+   Botao — Componente de botão reutilizável
+   ================================================================ */
+
+.botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--r-full);
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all 0.15s;
+  cursor: pointer;
+  border: none;
+}
+
+.botao:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.botao-primario {
+  background: var(--primary);
+  color: #fff;
+}
+.botao-primario:hover:not(:disabled) { opacity: 0.9; }
+
+.botao-contorno {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--fg);
+}
+.botao-contorno:hover:not(:disabled) { background: var(--bg-muted); }
+
+.botao-ocean {
+  background: var(--gradient-ocean);
+  color: #fff;
+  box-shadow: var(--shadow-glow);
+}
+.botao-ocean:hover:not(:disabled) { transform: scale(1.01); }
+
+.botao-pequeno { padding: 0.375rem 0.75rem; font-size: 0.75rem; }
+.botao-grande  { padding: 1rem 1.5rem; font-size: 1rem; }
+.botao-largo   { width: 100%; }

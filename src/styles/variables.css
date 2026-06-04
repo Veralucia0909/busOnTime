@@ -1,0 +1,87 @@
+/* ================================================================
+   BusOnTime — Variáveis CSS (Design Tokens)
+   ================================================================ */
+
+:root {
+  /* Cores de fundo */
+  --bg:       #0f1117;
+  --bg-card:  #161b27;
+  --bg-muted: #1e2435;
+  --border:   #2a3044;
+  --bg-blur: rgba(15, 17, 23, 0.92);
+
+  /* Cores de texto */
+  --fg:       #f1f5f9;
+  --fg-muted: #8892a4;
+
+  /* Cores primárias */
+  --primary:    #0e7c8a;
+  --primary-fg: #ffffff;
+  --accent:     #4ec9d8;
+  --accent-fg:  #0f1117;
+  --coral:      #d97757;
+  --coral-fg:   #ffffff;
+  --ocean:      #0e7c8a;
+  --ocean-dark: #0a5f6a;
+
+  /* Cores de status de lotação */
+  --status-free:     #22c55e;
+  --status-moderate: #eab308;
+  --status-almost:   #f97316;
+  --status-full:     #ef4444;
+
+  --status-free-bg:     rgba(34,  197, 94,  0.15);
+  --status-moderate-bg: rgba(234, 179, 8,   0.15);
+  --status-almost-bg:   rgba(249, 115, 22,  0.15);
+  --status-full-bg:     rgba(239, 68,  68,  0.15);
+
+  --destructive: #ef4444;
+
+  /* Gradientes */
+  --gradient-ocean:  linear-gradient(135deg, #0e7c8a 0%, #0a5f6a 100%);
+  --gradient-sunset: linear-gradient(135deg, #d97757 0%, #c0603a 100%);
+  --gradient-hero:   linear-gradient(160deg, #0a1628 0%, #0e7c8a 50%, #0a5f6a 100%);
+
+  /* Sombras */
+  --shadow-soft: 0 2px 12px rgba(0, 0, 0, 0.3);
+  --shadow-glow: 0 0 24px rgba(14, 124, 138, 0.35);
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.4);
+
+  /* Bordas arredondadas */
+  --r-sm:   0.375rem;
+  --r-md:   0.75rem;
+  --r-lg:   1rem;
+  --r-xl:   1.25rem;
+  --r-2xl:  1.5rem;
+  --r-3xl:  1.875rem;
+  --r-full: 9999px;
+}
+
+/* ================================================================
+   Tema claro — ativado quando <html data-theme="light">
+   O tema escuro é o padrão (variáveis acima no :root).
+   ================================================================ */
+
+[data-theme="light"] {
+  /* Fundos */
+  --bg:       #f1f5f9;
+  --bg-card:  #ffffff;
+  --bg-muted: #e2e8f0;
+  --border:   #cbd5e1;
+  --bg-blur: rgba(241, 245, 249, 0.92);
+
+  /* Textos */
+  --fg:       #0f172a;
+  --fg-muted: #64748b;
+
+  /* Primárias ficam iguais (ciano/teal é a identidade do app) */
+  --primary:    #0e7c8a;
+  --primary-fg: #ffffff;
+  --accent:     #0e7c8a;
+  --accent-fg:  #ffffff;
+
+  /* Sombras mais suaves no claro */
+  --shadow-soft: 0 2px 12px rgba(0, 0, 0, 0.08);
+  --shadow-glow: 0 0 24px rgba(14, 124, 138, 0.20);
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.10);
+}

@@ -1,0 +1,66 @@
+/* Customização do react-toastify para combinar com o tema escuro */
+.Toastify__toast {
+  font-family: var(--font-sans, system-ui, sans-serif);
+  border-radius: var(--r-xl, 12px);
+}
+
+.Toastify__toast--success {
+  background: var(--bg-card, #1a1f2e) !important;
+  color: var(--fg, #f1f5f9) !important;
+  border: 1px solid var(--status-free, #10b981);
+}
+
+.Toastify__toast--error {
+  background: var(--bg-card, #1a1f2e) !important;
+  color: var(--fg, #f1f5f9) !important;
+  border: 1px solid var(--status-full, #ef4444);
+}
+
+.Toastify__toast--info {
+  background: var(--bg-card, #1a1f2e) !important;
+  color: var(--fg, #f1f5f9) !important;
+  border: 1px solid var(--primary, #0e7c8a);
+}
+
+.Toastify__progress-bar--success {
+  background: var(--status-free, #10b981) !important;
+}
+
+/* :root {
+  --bg: #ffffff;
+  --card: #f8fafc;
+  --fg: #111827;
+  --fg-muted: #6b7280;
+  --primary: #2563eb;
+} */
+
+:root {
+  --bg: #ffffff;
+  --card: #f8fafc;
+  --fg: #111827;
+  --fg-muted: #6b7280;
+  --primary: #2563eb;
+  --bg-blur: rgba(15, 17, 23, 0.92);
+}
+
+.dark {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --fg: #f8fafc;
+  --fg-muted: #94a3b8;
+  --primary: #60a5fa;
+}
+
+html.dark {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --fg: #f8fafc;
+  --fg-muted: #94a3b8;
+  --primary: #60a5fa;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  transition: background-color 0.3s ease, color 0.3s ease; /* Efeito suave ao trocar */
+}

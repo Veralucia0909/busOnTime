@@ -1,0 +1,194 @@
+/* ================================================================
+   Cabeçalho — Barra de navegação superior
+   Estratégia: SEMPRE visível, em todos os tamanhos de tela.
+   - Mobile (≤480px): só ícones (sem labels), logo compacta
+   - Tablet (481-767px): ícones + labels curtos
+   - Desktop (≥768px): logo completa + pills com texto
+   ================================================================ */
+
+.cabecalho {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1100;
+  height: 3.5rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.75rem;
+  gap: 0.5rem;
+  border-bottom: 1px solid var(--border);
+  background: rgba(15, 17, 23, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* Logo */
+.cabecalho-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.cabecalho-logo-icone {
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: var(--r-md);
+  background: var(--gradient-ocean);
+  color: #fff;
+  box-shadow: var(--shadow-glow);
+  flex-shrink: 0;
+}
+.cabecalho-logo-texto {
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #fff;
+  white-space: nowrap;
+}
+.cabecalho-logo-texto span {
+  color: var(--accent);
+}
+
+/* Mobile pequeno (≤480px): esconde " Floripa" pra dar espaço pros pills */
+@media (max-width: 480px) {
+  .cabecalho {
+    padding: 0 0.5rem;
+    gap: 0.25rem;
+  }
+  .cabecalho-logo-texto span {
+    display: none;
+  }
+  .cabecalho-logo-texto {
+    font-size: 0.8125rem;
+  }
+}
+
+/* Mobile muito pequeno (≤360px): esconde o texto da logo, deixa só o ícone */
+@media (max-width: 360px) {
+  .cabecalho-logo-texto {
+    display: none;
+  }
+}
+
+/* Nav — pills no estilo da topbar do screenshot */
+.cabecalho-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+}
+
+.cabecalho-nav-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  padding: 0.5rem 0.625rem;
+  border-radius: var(--r-full);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  transition: background 0.15s, color 0.15s, transform 0.1s;
+  text-decoration: none;
+  min-height: 40px;
+  min-width: 40px;
+}
+
+.cabecalho-nav-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.cabecalho-nav-link.ativo {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* Labels — escondidas em mobile pequeno, visíveis em tablet+ */
+.cabecalho-nav-label {
+  display: none;
+}
+
+/* Tablet (≥481px): mostra labels nas pills */
+@media (min-width: 481px) {
+  .cabecalho {
+    padding: 0 1rem;
+    gap: 0.75rem;
+  }
+  .cabecalho-logo-texto {
+    font-size: 0.9375rem;
+  }
+  .cabecalho-logo-texto span {
+    display: inline;
+  }
+  .cabecalho-nav-label {
+    display: inline;
+  }
+  .cabecalho-nav-link {
+    padding: 0.5rem 0.875rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* Desktop (≥768px): cabeçalho maior, mais respiro */
+@media (min-width: 768px) {
+  .cabecalho {
+    height: 4rem;
+    padding: 0 1.5rem;
+    gap: 1rem;
+  }
+  .cabecalho-logo-icone {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+  .cabecalho-logo-texto {
+    font-size: 1.0625rem;
+  }
+  .cabecalho-nav {
+    gap: 0.375rem;
+  }
+  .cabecalho-nav-link {
+    padding: 0.5rem 1rem;
+    font-size: 0.9375rem;
+  }
+}
+
+/* ---------- Link "Painel da empresa" ---------- */
+/* Visualmente distinto dos outros pills — borda em vez de fundo */
+.cabecalho-link-admin {
+  border: 1px solid var(--border);
+  margin-left: 0.25rem;
+}
+.cabecalho-link-admin:hover {
+  border-color: var(--primary);
+  background: var(--bg-muted);
+}
+/* Quando o admin já está logado, fica mais destacado */
+.cabecalho-link-admin.admin-logado {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+.cabecalho-link-admin.admin-logado:hover {
+  background: var(--primary);
+  color: #fff;
+}
+/* Quando ativo (na própria página /admin), comportamento padrão dos pills */
+.cabecalho-link-admin.ativo {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+/* Em mobile pequeno, sem borda pra economizar espaço */
+@media (max-width: 480px) {
+  .cabecalho-link-admin {
+    border: none;
+    margin-left: 0;
+  }
+}

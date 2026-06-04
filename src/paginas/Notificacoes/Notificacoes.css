@@ -1,0 +1,128 @@
+/* ================================================================
+   Notificacoes — Página de alertas em tempo real
+   ================================================================ */
+
+.notif-cabecalho {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.notif-titulo { font-size: 1.875rem; font-weight: 700; }
+.notif-sub    { font-size: 0.875rem; color: var(--fg-muted); }
+
+.notif-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.notif-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: var(--r-2xl);
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  box-shadow: var(--shadow-soft);
+}
+
+.notif-icone {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: grid;
+  place-items: center;
+  border-radius: var(--r-md);
+  flex-shrink: 0;
+}
+
+.notif-icone.approach  { background: rgba(78, 201, 216, 0.1); color: var(--accent); }
+.notif-icone.crowding  { background: rgba(217, 119, 87, 0.1); color: var(--coral); }
+.notif-icone.departure { background: var(--status-free-bg);   color: var(--status-free); }
+.notif-icone.traffic   { background: var(--status-moderate-bg); color: var(--status-moderate); }
+
+.notif-corpo       { flex: 1; }
+.notif-linha       { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; }
+.notif-item-titulo { font-weight: 600; }
+.notif-tempo       { font-size: 0.75rem; color: var(--fg-muted); flex-shrink: 0; }
+.notif-item-corpo  { font-size: 0.875rem; color: var(--fg-muted); margin-top: 0.25rem; }
+
+/* ---------- hover do item de notificação ---------- */
+.notif-item {
+  transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+  position: relative;
+}
+.notif-item:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary);
+  background: var(--bg-card-hover, var(--bg-card));
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+}
+
+/* botão de excluir */
+.notif-excluir {
+  position: absolute;
+  top: 0.625rem;
+  right: 0.625rem;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: transparent;
+  border: none;
+  color: var(--fg-muted);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.18s, background 0.15s, color 0.15s;
+}
+.notif-item:hover .notif-excluir {
+  opacity: 1;
+}
+.notif-excluir:hover,
+.notif-excluir:focus-visible {
+  background: var(--status-full-bg);
+  color: var(--status-full);
+  opacity: 1;
+}
+
+/* Em mobile (sem hover), o botão fica sempre visível */
+@media (hover: none) {
+  .notif-excluir { opacity: 1; }
+}
+
+/* Cabeçalho com botão de restaurar */
+.notif-cabecalho {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.notif-restaurar {
+  flex-shrink: 0;
+}
+
+/* Vazio */
+.notif-vazio {
+  text-align: center;
+  padding: 4rem 1.5rem;
+  color: var(--fg-muted);
+}
+.notif-vazio svg {
+  opacity: 0.4;
+  margin-bottom: 1rem;
+}
+.notif-vazio h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--fg);
+  margin-bottom: 0.5rem;
+}
+.notif-vazio p {
+  font-size: 0.875rem;
+  max-width: 26rem;
+  margin: 0 auto;
+  line-height: 1.5;
+}

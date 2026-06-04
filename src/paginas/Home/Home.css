@@ -1,0 +1,195 @@
+/* ================================================================
+   Home — Página inicial do aplicativo
+   ================================================================ */
+
+/* Saudação */
+.home-saudacao {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.home-saudacao-muted { font-size: 0.875rem; color: var(--fg-muted); }
+.home-saudacao-nome  { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.02em; line-height: 1.2; }
+.home-saudacao-local {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  color: var(--fg-muted);
+  margin-top: 0.25rem;
+}
+
+/* Grade de estatísticas */
+.home-grade-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.home-card-stat {
+  border-radius: var(--r-2xl);
+  padding: 1rem;
+  color: #fff;
+  min-height: 6.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* No tema claro os gradientes continuam escuros (são a identidade do app)
+   mas precisam de sombra mais forte pra se destacar do fundo branco */
+[data-theme="light"] .home-card-stat {
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+}
+
+.home-card-stat-valor  { font-size: 1.5rem; font-weight: 700; line-height: 1; margin-top: 0.5rem; }
+.home-card-stat-rotulo { font-size: 0.75rem; font-weight: 600; margin-top: 0.25rem; opacity: 0.9; }
+.home-card-stat-sub    { font-size: 0.625rem; opacity: 0.6; margin-top: 0.125rem; }
+
+/* Cabeçalho de seção */
+.home-secao-cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.home-link-ver-todos {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.home-link-ver-todos:hover {
+  text-decoration: underline;
+}
+
+/* ---------- busca: limpar + resultados ---------------------------- */
+
+.home-busca-limpar {
+  background: transparent;
+  border: none;
+  color: var(--fg-muted);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 0.25rem;
+  min-width: 28px;
+  min-height: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+}
+.home-busca-limpar:hover {
+  color: var(--fg);
+  background: var(--bg-muted);
+}
+
+.home-resultados-cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+.home-resultados-contagem {
+  font-size: 0.8125rem;
+  color: var(--fg-muted);
+  background: var(--bg-muted);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--r-full);
+}
+.home-resultados-subtitulo {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--fg-muted);
+  margin: 1rem 0 0.75rem;
+}
+
+/* Empty state */
+.home-sem-resultados {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--fg-muted);
+}
+.home-sem-resultados svg {
+  color: var(--fg-muted);
+  opacity: 0.5;
+  margin-bottom: 1rem;
+}
+.home-sem-resultados h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--fg);
+  margin-bottom: 0.5rem;
+}
+.home-sem-resultados p {
+  font-size: 0.875rem;
+  max-width: 24rem;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Lista de paradas */
+.home-paradas-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.home-parada-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.875rem 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  text-decoration: none;
+  color: var(--fg);
+  transition: border-color 0.15s, transform 0.15s;
+}
+.home-parada-item:hover {
+  border-color: var(--primary);
+  transform: translateY(-1px);
+}
+.home-parada-icone {
+  width: 2.25rem;
+  height: 2.25rem;
+  display: grid;
+  place-items: center;
+  border-radius: var(--r-md);
+  background: var(--bg-muted);
+  color: var(--primary);
+  flex-shrink: 0;
+}
+.home-parada-nome { font-weight: 600; font-size: 0.9375rem; }
+.home-parada-meta { font-size: 0.75rem; color: var(--fg-muted); margin-top: 0.125rem; }
+
+/* ---------- formulário de busca com botão funcional ----------- */
+.home-busca-form {
+  margin-top: 1.25rem;
+}
+.home-busca-botao {
+  background: transparent;
+  border: none;
+  color: var(--fg-muted);
+  cursor: pointer;
+  padding: 0.25rem;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  min-width: 32px;
+  min-height: 32px;
+  border-radius: 50%;
+  transition: background 0.15s, color 0.15s;
+}
+.home-busca-botao:hover,
+.home-busca-botao:focus-visible {
+  color: var(--primary);
+  background: var(--bg-muted);
+}

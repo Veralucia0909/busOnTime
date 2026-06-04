@@ -1,0 +1,41 @@
+/* ================================================================
+   CampoFormulario — Campo de entrada com rótulo
+   ================================================================ */
+
+.campo-formulario {
+  margin-bottom: 1rem;
+}
+
+.campo-rotulo {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 0.375rem;
+}
+
+.campo-wrap {
+  position: relative;
+}
+
+.campo-toggle-senha {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.4);
+  display: flex;
+  align-items: center;
+  transition: color 0.15s;
+}
+
+.campo-toggle-senha:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.campo-wrap .input-field {
+  padding-right: 2.75rem;
+}

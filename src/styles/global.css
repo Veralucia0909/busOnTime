@@ -1,0 +1,257 @@
+/* ================================================================
+   BusOnTime — Estilos Globais e Sistema de Design
+   ================================================================ */
+
+/* ---------- Layout de Página ----------------------------------- */
+.pagina {
+  min-height: 100vh;
+  background: var(--bg);
+  padding-top: 3.5rem;   /* altura do cabeçalho fixo (mobile) */
+}
+
+.conteudo {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .pagina {
+    padding-top: 4rem;     /* cabeçalho fica maior no desktop */
+  }
+  .conteudo {
+    padding: 2.5rem 2rem;
+  }
+}
+
+/* ---------- Cards e Superfícies -------------------------------- */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--r-2xl);
+  box-shadow: var(--shadow-soft);
+}
+
+.card-p  { padding: 1.5rem; }
+.card-p4 { padding: 1rem; }
+.card-p7 { padding: 1.75rem; }
+
+/* ---------- Botões --------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--r-full);
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all 0.15s;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+}
+.btn-primary:hover { opacity: 0.9; }
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--fg);
+}
+.btn-outline:hover { background: var(--bg-muted); }
+
+.btn-coral {
+  background: var(--coral);
+  color: #fff;
+}
+
+.btn-ocean {
+  background: var(--gradient-ocean);
+  color: #fff;
+  box-shadow: var(--shadow-glow);
+}
+.btn-ocean:hover { transform: scale(1.01); }
+
+.btn-sm { padding: 0.375rem 0.75rem; font-size: 0.75rem; }
+.btn-lg { padding: 1rem 1.5rem; font-size: 1rem; }
+
+/* ---------- Campos de Entrada ---------------------------------- */
+.input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 0.875rem;
+  color: var(--fg);
+}
+.input::placeholder { color: var(--fg-muted); }
+
+.input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: var(--r-full);
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  padding: 0.75rem 1rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: var(--r-xl);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.07);
+  color: #fff;
+  font-size: 0.875rem;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.input-field::placeholder { color: rgba(255, 255, 255, 0.35); }
+.input-field:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent);
+}
+
+/* ---------- Badges e Pílulas ----------------------------------- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.125rem 0.625rem;
+  border-radius: var(--r-full);
+  font-size: 0.625rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge-free     { background: var(--status-free-bg);     color: var(--status-free); }
+.badge-moderate { background: var(--status-moderate-bg); color: var(--status-moderate); }
+.badge-almost   { background: var(--status-almost-bg);   color: var(--status-almost); }
+.badge-full     { background: var(--status-full-bg);     color: var(--status-full); }
+
+.pill-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.375rem 0.875rem;
+  border-radius: var(--r-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #fff;
+}
+.pill-status.free     { background: var(--status-free); }
+.pill-status.moderate { background: var(--status-moderate); }
+.pill-status.almost   { background: var(--status-almost); }
+.pill-status.full     { background: var(--status-full); }
+
+/* ---------- Toggle Switch -------------------------------------- */
+.toggle {
+  position: relative;
+  width: 2.75rem;
+  height: 1.5rem;
+  border-radius: var(--r-full);
+  background: var(--bg-muted);
+  cursor: pointer;
+  transition: background 0.2s;
+  flex-shrink: 0;
+  border: none;
+}
+.toggle.on { background: var(--primary); }
+.toggle::after {
+  content: "";
+  position: absolute;
+  top: 0.125rem;
+  left: 0.125rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  transition: left 0.2s;
+}
+.toggle.on::after { left: calc(100% - 1.375rem); }
+
+/* ---------- Barra de Progresso --------------------------------- */
+.progress-bar {
+  height: 0.5rem;
+  border-radius: var(--r-full);
+  background: var(--bg-muted);
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  border-radius: var(--r-full);
+  transition: width 0.3s;
+}
+.progress-fill.free     { background: var(--status-free); }
+.progress-fill.moderate { background: var(--status-moderate); }
+.progress-fill.almost   { background: var(--status-almost); }
+.progress-fill.full     { background: var(--status-full); }
+
+/* ---------- Cores de Status ------------------------------------ */
+.bg-status-free     { background: var(--status-free) !important; }
+.bg-status-moderate { background: var(--status-moderate) !important; }
+.bg-status-almost   { background: var(--status-almost) !important; }
+.bg-status-full     { background: var(--status-full) !important; }
+
+/* ---------- Helpers de Gradiente ------------------------------ */
+.bg-gradient-ocean  { background: var(--gradient-ocean); }
+.bg-gradient-sunset { background: var(--gradient-sunset); }
+.bg-gradient-hero   { background: var(--gradient-hero); }
+.bg-primary         { background: var(--primary); }
+.bg-ocean           { background: var(--ocean); }
+.bg-coral           { background: var(--coral); }
+.bg-accent          { background: var(--accent); }
+
+/* ---------- Badge ao vivo ------------------------------------- */
+.badge-ao-vivo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.125rem 0.5rem;
+  border-radius: var(--r-full);
+  font-size: 0.625rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: var(--status-free-bg);
+  color: var(--status-free);
+}
+
+/* ---------- Seções -------------------------------------------- */
+.secao-titulo { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.02em; }
+.secao-sub    { font-size: 0.875rem; color: var(--fg-muted); margin-top: 0.125rem; }
+
+.grade-linhas {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+@media (min-width: 768px) {
+  .grade-linhas { grid-template-columns: 1fr 1fr; }
+}
+
+/* ---------- Animações ----------------------------------------- */
+@keyframes pulsar {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.5; }
+}
+.animate-pulse { animation: pulsar 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+
+/* ---------- Utilitários --------------------------------------- */
+.divisor      { height: 1px; background: var(--border); }
+.texto-primario  { color: var(--primary); }
+.texto-accent    { color: var(--accent); }
+.texto-coral     { color: var(--coral); }
+.texto-muted     { color: var(--fg-muted); }
+.negrito         { font-weight: 700; }
+.semi-negrito    { font-weight: 600; }
+.centralizado    { text-align: center; }
+.branco          { color: #fff; }

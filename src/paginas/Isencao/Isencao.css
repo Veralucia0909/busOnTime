@@ -1,0 +1,124 @@
+/* ================================================================
+   Isenção — solicitação de tarifa zero
+   ================================================================ */
+
+.isencao-voltar {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: none;
+  color: var(--fg-muted);
+  font-size: 0.875rem;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;
+}
+.isencao-voltar:hover { color: var(--fg); }
+
+.isencao-cabecalho {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.isencao-titulo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+.isencao-sub {
+  font-size: 0.875rem;
+  color: var(--fg-muted);
+  margin-top: 0.25rem;
+}
+
+.isencao-campo-opcao {
+  background: var(--bg-card);
+}
+
+.isencao-info {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  padding: 1rem 1.25rem;
+  font-size: 0.875rem;
+  color: var(--fg-muted);
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.isencao-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.isencao-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.isencao-campo-rotulo {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--fg);
+}
+
+.isencao-textarea {
+  min-height: 6rem;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.isencao-erro {
+  color: var(--status-full);
+  background: var(--status-full-bg);
+  border-radius: var(--r-md);
+  padding: 0.625rem 0.875rem;
+  font-size: 0.875rem;
+}
+
+.isencao-enviar {
+  width: 100%;
+  justify-content: center;
+  padding: 0.875rem;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* tela de sucesso */
+.isencao-sucesso {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 1rem;
+  gap: 1rem;
+}
+.isencao-sucesso-icone {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background: var(--status-free-bg);
+  color: var(--status-free);
+  display: grid;
+  place-items: center;
+}
+.isencao-sucesso-titulo {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.isencao-sucesso-texto {
+  font-size: 0.9375rem;
+  color: var(--fg-muted);
+  max-width: 28rem;
+  line-height: 1.5;
+}
+.isencao-sucesso-acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+  justify-content: center;
+}

@@ -1,0 +1,9 @@
+/* ================================================================
+   Rodape — bottom nav (DESATIVADA)
+   A navegação agora vive sempre no Cabeçalho (topbar fixa responsiva).
+   Rodapé fica escondido em todos os tamanhos para evitar duplicação.
+   ================================================================ */
+
+.rodape {
+  display: none;
+}

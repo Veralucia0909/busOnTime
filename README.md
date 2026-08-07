@@ -39,4 +39,4 @@ Projeto construído em equipe durante o Hackathon SENAI 2026 por:
 * **Mauricio**
 * **Daniel**
 
-Orientação e mentoria especial dos professores **Gleimon Ramos**, **Natália K.** e **Thiago**.
+Orientação e mentoria especial dos professores **Gleimon Ramos**, **Natália K.** e **Thiago Cordeiro**.

@@ -1,6 +1,6 @@
-# 🚌 BusOnTime Floripa — Mobilidade Urbana Inteligente
+# 🚌 BusOnTime Floripa  Mobilidade Urbana Inteligente
 
-> 🏆 **2º Lugar no Creative & Tech Challenge — Hackathon SENAI 2026**  
+> 🏆 **2º Lugar no Creative & Tech Challenge  Hackathon SENAI 2026**  
 > *Aplicação PWA para rastreamento de ônibus em tempo real, previsão de lotação por inteligência artificial e suporte offline.*
 
 ## 💡 Sobre o Projeto

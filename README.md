@@ -115,5 +115,5 @@ Com mentoria dos professores **Gleimon Ramos**, **Natália K.** e **Thiago Corde
 ---
 
 <p align="center">
-  <sub>Desenvolvido durante o Creative &amp; Tech Challenge — Hackathon SENAI Florianópolis 2026</sub>
+  <sub>Desenvolvido durante o Creative &amp; Tech Challenge Hackathon SENAI Florianópolis 2026</sub>
 </p>

@@ -20,9 +20,9 @@
 
 ## 💡 O problema
 
-Quem usa transporte público em Florianópolis convive todo dia com a mesma incerteza: não saber quando o ônibus chega, nem se vai conseguir entrar quando ele chegar. Atrasos e superlotação são rotina, e a informação disponível hoje não ajuda a decidir nada — você descobre que o ônibus está cheio quando ele já parou na sua frente.
+Quem usa transporte público em Florianópolis convive todo dia com a mesma incerteza: não saber quando o ônibus chega, nem se vai conseguir entrar quando ele chegar. Atrasos e superlotação são rotina, e a informação disponível hoje não ajuda a decidir nada você descobre que o ônibus está cheio quando ele já parou na sua frente.
 
-Durante o **Hackathon SENAI 2026**, validamos esse problema com passageiros reais e construímos o BusOnTime: um app que responde às duas perguntas que importam antes de sair de casa — *quando chega* e *cabe mais gente*.
+Durante o **Hackathon SENAI 2026**, validamos esse problema com passageiros reais e construímos o BusOnTime: um app que responde às duas perguntas que importam antes de sair de casa *quando chega* e *cabe mais gente*.
 
 A proposta técnica que diferenciou o projeto foi usar **visão computacional nas câmeras de segurança já instaladas nos veículos** para contar passageiros automaticamente, sem exigir nenhum hardware novo na frota. O nível de lotação chega ao usuário antes do ônibus chegar ao ponto.
 
